@@ -21,6 +21,7 @@ func main() {
 		url := "http://127.0.0.1:8000/applications/putQuantityOfVotes" // Замените на ваш реальный URL
 		go api.SendStatus(request.PK, url)
 		c.JSON(http.StatusOK, gin.H{"message": "Status update initiated"})
+
 	})
 
 	r.Run()
